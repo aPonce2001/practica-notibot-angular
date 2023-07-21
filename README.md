@@ -1,6 +1,6 @@
-# PracticaNotibotAngular
+# Practica Notibot Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+Práctica de consumo de API en Angular utilizando Notibot API que se desarrolló en: https://github.com/aPonce2001/NoticiasAPI
 
 ## Development server
 
