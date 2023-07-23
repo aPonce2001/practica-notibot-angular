@@ -1,0 +1,85 @@
+hr {
+    width: 89%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    min-height: 100vh;
+    min-width: 60px;
+    padding: 12px 0px;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo svg {
+    height: 38px;
+}
+
+nav {
+    width: 100%;
+}
+
+.btn-opcion {
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    height: 45px;
+    position: relative;
+    width: 45px;
+}
+
+.contenedor-opcion .btn-opcion {
+    background-color: #6f0f19;
+    border-radius: 100%;
+    transition-duration: 150ms;
+}
+
+.contenedor-seleccionado-opcion .btn-opcion,
+.contenedor-opcion .btn-opcion:hover {
+    background-color: #f5e8e9;
+    border-radius: 25%;
+    color: #9e1523;
+    transition-duration: 150ms;
+}
+
+.contenedor-opcion,
+.contenedor-seleccionado-opcion {
+    margin-bottom: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.contenedor-seleccionado-opcion {
+    border-left: 0.3em solid;
+    border-right: 0.3em transparent solid;
+    box-sizing: border-box;
+}
+
+.btn-opcion::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 25%;
+    left: 110%;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.btn-opcion:hover::after,
+.btn-opcion:focus::after {
+    pointer-events: auto;
+    opacity: 1;
+}
