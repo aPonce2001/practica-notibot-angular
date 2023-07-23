@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    background-color: #0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 60px;
+}
+
+section {
+    border-top-left-radius: 25px;
+}
