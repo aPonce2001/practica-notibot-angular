@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/noticias',
+    pathMatch: 'full'
+  },
+  {
     path: 'autores',
     loadChildren: () => import('./modules/autores/autores.module').then(m => m.AutoresModule)
   },
@@ -10,10 +15,7 @@ const routes: Routes = [
     path: 'noticias',
     loadChildren: () => import('./modules/noticias/noticias.module').then(m => m.NoticiasModule)
   },
-  {
-    path: '',
-    redirectTo: 'autores'
-  }
+  
 ];
 
 @NgModule({

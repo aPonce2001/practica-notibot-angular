@@ -5,8 +5,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { AutoresRoutingModule } from './autores-routing.module';
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     CoreModule,
