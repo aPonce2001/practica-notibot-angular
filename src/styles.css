@@ -16,3 +16,9 @@ body {
 .bg-2 {
     background-color: #490a10;
 }
+
+.text-color-1 {
+    color: #9e1523;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -52,6 +52,7 @@ nav {
 
 .contenedor-opcion,
 .contenedor-seleccionado-opcion {
+    cursor: pointer;
     margin-bottom: 8px;
     position: relative;
     width: 100%;

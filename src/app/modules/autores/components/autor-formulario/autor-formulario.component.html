@@ -1,0 +1,54 @@
+<div class="rounded-5 bg-white p-5 h-100">
+    <div class="text-color-1 btn-eliminar" *ngIf="autorSeleccionado.id != null" (click)="deleteAutor()"
+        [ngClass]="{'deshabilitado': !sePuedeBorrar, 'notransition': !sePuedeBorrar, 'habilitado': sePuedeBorrar}">
+        <i class="fa-solid fa-trash fa-lg"></i>
+    </div>
+
+    <form [formGroup]="formularioAutor" (ngSubmit)="autorSeleccionado.id != null ? actualizarAutor() : crearAutor()">
+        <label for="nombre">Nombre</label>
+        <input formControlName="nombre" type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre."
+            [(ngModel)]="autorSeleccionado.nombre">
+
+        <div class="text-danger mensajes-error" [hidden]="nombre.valid || nombre.pristine">
+            <ul>
+                <li *ngIf="nombre.errors?.['required']">
+                    El campo de nombre es obligatorio. Por favor, completa este campo.
+                </li>
+            </ul>
+        </div>
+
+        <label for="apellido">Apellido</label>
+        <input formControlName="apellido" type="text" class="form-control" id="apellido"
+            placeholder="Ingrese el apellido." [(ngModel)]="autorSeleccionado.apellido">
+        <div class="text-danger mensajes-error" [hidden]="apellido.valid || apellido.pristine">
+            <ul>
+                <li *ngIf="apellido.errors?.['required']">
+                    El campo de apellido es obligatorio. Por favor, completa este campo.
+                </li>
+            </ul>
+        </div>
+
+        <label for="correo">Correo</label>
+        <input formControlName="correo" type="email" class="form-control" id="correo"
+            placeholder="Ingrese el correo. (Ejemplo: correo@dominio.com)" [(ngModel)]="autorSeleccionado.correo" />
+        <div class="text-danger mensajes-error" [hidden]="correo.valid || correo.pristine">
+            <ul>
+                <li *ngIf="correo.errors?.['required']">
+                    El campo de correo es obligatorio. Por favor, completa este campo.
+                </li>
+                <li *ngIf="correo.errors?.['email']">
+                    "El campo de correo debe tener un formato válido, como ejemplo@dominio.com.
+                </li>
+            </ul>
+        </div>
+
+        <button [disabled]="formularioAutor.invalid">
+            {{autorSeleccionado.id != null ? 'Actualizar' : 'Guardar'}}
+        </button>
+
+        <button type="button" (click)="cancelar()">
+            Cancelar
+        </button>
+    </form>
+    {{ sePuedeBorrar }}
+</div>

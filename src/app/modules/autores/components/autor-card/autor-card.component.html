@@ -1,0 +1,6 @@
+<div class="autor-card rounded-5 p-3 mx-3 my-1" [ngClass]="{ 'autor-seleccionado': autorSeleccionado == autor, }">
+    <img src="https://api.dicebear.com/6.x/bottts-neutral/jpg?seed={{autor.nombre}}{{autor.apellido}}"
+        alt="Foto de {{autor.nombre}} {{autor.apellido}}" />
+    <p class="m-1 nombre text-color-1 ms-4">{{autor.nombre}} {{autor.apellido}}</p>
+    <p class="fw-light m-1 correo ms-4">{{autor.correo}}</p>
+</div>

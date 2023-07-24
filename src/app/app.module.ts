@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { AutoresModule } from "./modules/autores/autores.module";
-import { NoticiasModule } from './modules/noticias/noticias.module';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,8 @@ import { NoticiasModule } from './modules/noticias/noticias.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    AutoresModule,
-    NoticiasModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

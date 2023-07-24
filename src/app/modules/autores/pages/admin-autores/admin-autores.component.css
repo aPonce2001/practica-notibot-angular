@@ -1,0 +1,15 @@
+.pagina-admin-autores {
+    display: flex;
+    flex-direction: row;
+}
+
+.lista-autores {
+    width: calc(4/12 * 100%);
+}
+
+.formulario-autores {
+    flex-grow: 1;
+    min-height: 71vh;
+    height: 71vh;
+    box-sizing: border-box;
+}
