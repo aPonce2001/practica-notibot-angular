@@ -3,7 +3,7 @@
         class="form">
         <div class="form__title-button-container">
             <div class="form__title">Formulario de autores</div>
-            <div class="text-color-1 btn-eliminar" *ngIf="autorSeleccionado.id != null" (click)="deleteAutor()"
+            <div class="text-color-1 btn-eliminar" *ngIf="autorSeleccionado.id != null" (click)="sePuedeBorrar?deleteAutor():false"
                 [ngClass]="{'deshabilitado': !sePuedeBorrar, 'notransition': !sePuedeBorrar, 'habilitado': sePuedeBorrar}">
                 <i class="fa-solid fa-trash fa-lg"></i>
             </div>
@@ -48,8 +48,9 @@
             </ul>
         </div>
         <div class="h-buttons-container">
-            <button [disabled]="formularioAutor.invalid" class="form__button form__button--principal">
-                {{autorSeleccionado.id != null ? 'Actualizar' : 'Guardar'}}
+            <button [disabled]="formularioAutor.invalid" class="form__button form__button--principal"
+                [ngClass]="{'form__button--disabled': formularioAutor.invalid}">
+                {{ autorSeleccionado.id != null ? 'Actualizar' : 'Guardar' }}
             </button>
 
             <button type="button" (click)="cancelar()" class="form__button form__button--secondary">
