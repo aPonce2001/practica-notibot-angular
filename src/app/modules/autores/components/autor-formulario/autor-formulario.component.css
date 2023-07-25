@@ -1,8 +1,16 @@
+ul {
+    margin-top: -14px;
+}
+
 .btn-eliminar {
-    margin-left: 100%;
+    display: inline;
+    position: absolute;
+    top: -25px;
+    left: 95%;
     font-size: 24px;
     min-height: 48px;
     position: relative;
+    width: max-content;
 }
 
 .habilitado{
@@ -32,8 +40,8 @@
     pointer-events: none;
     transition: opacity 0.3s;
     width: 200px;
-    top: -25px;
-    right: 15%;
+    top: -50px;
+    right: -10px;
     margin-right: 10px;
 }
 
