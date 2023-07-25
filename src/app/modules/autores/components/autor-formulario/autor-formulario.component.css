@@ -1,0 +1,63 @@
+ul {
+    margin-top: -14px;
+}
+
+.btn-eliminar {
+    display: inline;
+    position: absolute;
+    top: -25px;
+    left: 95%;
+    font-size: 24px;
+    min-height: 48px;
+    position: relative;
+    width: max-content;
+}
+
+.habilitado{
+    transition: 0.3s;
+}
+
+.habilitado:hover {
+    color: red;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.deshabilitado {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.deshabilitado::after {
+    content: 'Este autor no se puede borrar porque posee noticias registradas.';
+    position: absolute;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    width: 200px;
+    top: -50px;
+    right: -10px;
+    margin-right: 10px;
+}
+
+.deshabilitado:hover::after,
+.deshabilitado:focus::after {
+    opacity: 1;
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+}

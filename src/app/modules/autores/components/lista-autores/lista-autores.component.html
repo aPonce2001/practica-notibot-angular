@@ -1,0 +1,6 @@
+<div class="lista-autores rounded-5">
+    <h1 class="text-color-1 text-center w-100">Autores</h1>
+    <hr>
+    <app-autor-card (click)="seleccionarAutor(autor)" *ngFor="let autor of listaAutores"
+        [autor]="autor"></app-autor-card>
+</div>

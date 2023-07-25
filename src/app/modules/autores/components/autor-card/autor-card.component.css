@@ -1,0 +1,36 @@
+.autor-card {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    transition: 0.3s;
+}
+
+.autor-card:hover,
+.autor-seleccionado {
+    background-color: #ecd0d3;
+    cursor: pointer;
+}
+
+.autor-seleccionado{
+    box-shadow: 0 0 13px #2f060a;
+}
+
+img {
+    display: block;
+    grid-area: 1 / 1 / 3 / 2;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.correo {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 0.75em;
+}
+
+.nombre {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 1.25em;
+    font-weight: 900;
+}
